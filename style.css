@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .card {
+    border: none;
+    background-color: #f8f9fa;
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+  }
+  
+  .card-header {
+    background-color: #0d6efd;
+    color: white;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-muted {
+    font-size: 0.9rem;
+  }
+  /* Default styles for small devices */
+  .weather-carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.weather-box {
+    flex: 0 0 300px; /* Adjust the width as needed */
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Other styling (customize as desired) */
+.hour {
+    font-weight: bold;
+}
+
+.temp, .feels-like, .wind-speed, .rain-chance {
+    font-size: 14px;
+}
+
+.condition img {
+    max-width: 50px;
+    vertical-align: middle;
+}
+
+.condition span {
+    margin-left: 10px;
+}

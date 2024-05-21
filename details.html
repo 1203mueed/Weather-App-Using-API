@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Weather Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <script src="script.js"></script>
+    <script>
+        // Parse the URL query string to get the 'city' parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const city = urlParams.get('city');
+      
+        if (city) {
+          // Instantiate WeatherInfo and display the weather
+          const weatherInfo = new WeatherInfo(city); // Use the variable 'city', not the string 'city'
+          const today = new Date().toISOString().split('T')[0]; // Get today's date in YYYY-MM-DD format
+          weatherInfo.displayHourlyWeather(today);
+        } else {
+          // Handle the case where 'city' parameter is not provided in the URL
+          // Redirect to a default page or show an error message
+          document.body.innerHTML = '<p>City not specified. Please go back and enter a city name.</p>';
+        }
+      </script>
+      
+      <div id="weather-container" class="weather-carousel">
+        <!-- Weather boxes will be dynamically added here -->
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
